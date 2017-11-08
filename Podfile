@@ -3,5 +3,6 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'WeatherShift' do
- pod 'Alamofire'
+  pod "Alamofire"
+  pod "Charts"
 end

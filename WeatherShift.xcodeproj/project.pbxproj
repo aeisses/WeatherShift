@@ -14,6 +14,7 @@
 		0484DF431FB34BFB007881E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0484DF421FB34BFB007881E3 /* Assets.xcassets */; };
 		0484DF461FB34BFB007881E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0484DF441FB34BFB007881E3 /* LaunchScreen.storyboard */; };
 		048C03DE1FB3518500FD2916 /* RESTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C03DD1FB3518500FD2916 /* RESTManager.swift */; };
+		048C03E21FB3A11500FD2916 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C03E11FB3A11500FD2916 /* GraphViewController.swift */; };
 		DB3ED37C0F0C9158ED591673 /* Pods_WeatherShift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C722B9A0D263F9BF4C4D1DA9 /* Pods_WeatherShift.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		0484DF451FB34BFB007881E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0484DF471FB34BFB007881E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048C03DD1FB3518500FD2916 /* RESTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTManager.swift; sourceTree = "<group>"; };
+		048C03E11FB3A11500FD2916 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		8397F65E1DD18FAAD134636A /* Pods-WeatherShift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherShift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherShift/Pods-WeatherShift.release.xcconfig"; sourceTree = "<group>"; };
 		C4451F3B1DF7C2C71F173A89 /* Pods-WeatherShift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherShift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherShift/Pods-WeatherShift.debug.xcconfig"; sourceTree = "<group>"; };
 		C722B9A0D263F9BF4C4D1DA9 /* Pods_WeatherShift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherShift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				0484DF441FB34BFB007881E3 /* LaunchScreen.storyboard */,
 				0484DF471FB34BFB007881E3 /* Info.plist */,
 				0484DF3F1FB34BFB007881E3 /* WeatherShift.xcdatamodeld */,
+				048C03E11FB3A11500FD2916 /* GraphViewController.swift */,
 			);
 			path = WeatherShift;
 			sourceTree = "<group>";
@@ -124,12 +127,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Salesforce;
 				TargetAttributes = {
 					0484DF341FB34BFB007881E3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = LK2576GXKT;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -219,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0484DF411FB34BFB007881E3 /* WeatherShift.xcdatamodeld in Sources */,
+				048C03E21FB3A11500FD2916 /* GraphViewController.swift in Sources */,
 				048C03DE1FB3518500FD2916 /* RESTManager.swift in Sources */,
 				0484DF3B1FB34BFB007881E3 /* ViewController.swift in Sources */,
 				0484DF391FB34BFB007881E3 /* AppDelegate.swift in Sources */,
@@ -257,7 +262,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -265,7 +272,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -307,7 +318,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -315,7 +328,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -350,7 +367,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.WeatherShift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -365,7 +383,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.WeatherShift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

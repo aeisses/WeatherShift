@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1946" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="Q2R-N2-8Ij">
             <objects>
-                <viewController id="dsQ-3G-bah" sceneMemberID="viewController">
+                <viewController id="dsQ-3G-bah" customClass="GraphViewController" customModule="WeatherShift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qlb-qr-IO5"/>
                         <viewControllerLayoutGuide type="bottom" id="HgX-sz-zEh"/>
@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2y-Uo-9Un" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="844"/>
+            <point key="canvasLocation" x="1462" y="908"/>
         </scene>
     </scenes>
 </document>
