@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let manager = RESTManager()
-        manager.loadWeatherData()
-        
+
+        let defaults = UserDefaults.standard;
+        if (defaults.object(forKey: "dataRead") == nil) {
+            let manager = RESTManager()
+            manager.loadWeatherData()
+            defaults.set("YES", forKey: "dataRead")
+        }
         return true
     }
 
