@@ -1,0 +1,50 @@
+# Xcode
+.DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xccheckout
+*.sw?
+*.irb-history
+*.xcscmblueprint
+
+#Generated code
+Vendor/SOSNamespaces.h
+Dependencies/*.zip*
+Dependencies/*.tar*
+SOS/Dependencies/OpenTok
+SOS/Dependencies/ServiceCloudKit*
+
+#CocoaPods
+Pods
+
+#appledoc
+docs/
+
+#tmp directory used for packaging frameworks
+tmp/
+build/
+scripts/dependency/*.zip.*
+scripts/dependency/*.zip
+artifacts/
+
+# Node
+node_modules
+
+# Calabash
+TestingApps/SOTesters/test_servers/GoQA_Chrome_Profile/
+TestingApps/SOTesters/test_servers/selenium_log/
+
+
