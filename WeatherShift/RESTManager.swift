@@ -93,4 +93,21 @@ class RESTManager: NSObject {
 
         return fetchedLocations;
     }
+
+    func weatherDataForType(type: String) -> Array<WeatherData> {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        let locationFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "WeatherData")
+        locationFetch.predicate = NSPredicate(format: "parameter == %@", type)
+
+        let fetchedLocations:Array<WeatherData>
+        do {
+            fetchedLocations = try context.fetch(locationFetch) as! [WeatherData]
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+
+        return fetchedLocations;
+    }
 }

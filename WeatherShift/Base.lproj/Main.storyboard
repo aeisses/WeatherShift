@@ -139,12 +139,26 @@
                     <view key="view" contentMode="scaleToFill" id="aQi-eE-3dn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hrL-VD-7jX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hrL-VD-7jX" secondAttribute="trailing" id="Fl3-I0-2qy"/>
+                            <constraint firstItem="hrL-VD-7jX" firstAttribute="leading" secondItem="aQi-eE-3dn" secondAttribute="leading" id="LCF-aT-16J"/>
+                            <constraint firstItem="HgX-sz-zEh" firstAttribute="top" secondItem="hrL-VD-7jX" secondAttribute="bottom" id="aJs-TF-7Ce"/>
+                            <constraint firstItem="hrL-VD-7jX" firstAttribute="top" secondItem="Qlb-qr-IO5" secondAttribute="bottom" id="h3F-f0-vwL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="hrL-VD-7jX" id="Vcv-J9-crL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2y-Uo-9Un" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="908"/>
+            <point key="canvasLocation" x="1461.5999999999999" y="907.1964017991005"/>
         </scene>
     </scenes>
 </document>
