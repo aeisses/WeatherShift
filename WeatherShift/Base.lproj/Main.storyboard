@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jqb-rG-Vce">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jqb-rG-Vce">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +15,7 @@
             <objects>
                 <navigationController id="Jqb-rG-Vce" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BGe-3m-eNW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -37,24 +38,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psQ-9a-j7R">
-                                <rect key="frame" x="111" y="188" width="153" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Graph"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psQ-9a-j7R">
+                                <rect key="frame" x="137.5" y="214.5" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LFj-kz-EXw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="fFI-VA-3fj"/>
+                                </constraints>
+                                <state key="normal" title="Show Graph">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="showGraph:" destination="BYZ-38-t0r" eventType="touchDown" id="uH8-1W-KKc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-cA-ZqJ">
-                                <rect key="frame" x="111" y="263" width="153" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Map"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-cA-ZqJ">
+                                <rect key="frame" x="137.5" y="147" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eNF-wC-uMD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="tQJ-pa-Crh"/>
+                                </constraints>
+                                <state key="normal" title="Show Map">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="showMap:" destination="BYZ-38-t0r" eventType="touchDown" id="n76-wk-i4M"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dIN-cA-ZqJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="5Bv-pD-LW7"/>
+                            <constraint firstItem="psQ-9a-j7R" firstAttribute="top" secondItem="dIN-cA-ZqJ" secondAttribute="bottom" constant="27.5" id="D2G-dw-hMD"/>
+                            <constraint firstItem="dIN-cA-ZqJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SgZ-Vt-xyW"/>
+                            <constraint firstItem="psQ-9a-j7R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hRK-Ch-E6G"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dtQ-B5-AjV"/>
                     <connections>
@@ -66,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="965.60000000000002" y="142.57871064467767"/>
         </scene>
-        <!--View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="Og6-nz-5s9">
             <objects>
-                <viewController id="6w2-Tz-hN1" sceneMemberID="viewController">
+                <viewController id="6w2-Tz-hN1" customClass="GraphViewController" customModule="WeatherShift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Hd-fS-PrI"/>
                         <viewControllerLayoutGuide type="bottom" id="YnZ-8d-qTV"/>
@@ -77,17 +96,42 @@
                     <view key="view" contentMode="scaleToFill" id="fyK-3m-Er2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkw-hJ-bro" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="64" width="343" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-Aj-lUo">
+                                <rect key="frame" x="16" y="507" width="343" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ZVY-0h-eQo"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YnZ-8d-qTV" firstAttribute="top" secondItem="8dP-Aj-lUo" secondAttribute="bottom" id="2JE-AB-QSz"/>
+                            <constraint firstItem="vkw-hJ-bro" firstAttribute="leading" secondItem="fyK-3m-Er2" secondAttribute="leadingMargin" id="3fN-PJ-1hl"/>
+                            <constraint firstItem="vkw-hJ-bro" firstAttribute="top" secondItem="fyK-3m-Er2" secondAttribute="top" constant="64" id="Byp-9K-wk7"/>
+                            <constraint firstItem="YnZ-8d-qTV" firstAttribute="top" secondItem="vkw-hJ-bro" secondAttribute="bottom" constant="160" id="SnV-yU-NlI"/>
+                            <constraint firstItem="vkw-hJ-bro" firstAttribute="trailing" secondItem="fyK-3m-Er2" secondAttribute="trailingMargin" id="Xaq-1o-785"/>
+                            <constraint firstItem="8dP-Aj-lUo" firstAttribute="leading" secondItem="fyK-3m-Er2" secondAttribute="leadingMargin" id="hr8-Lj-6U7"/>
+                            <constraint firstItem="8dP-Aj-lUo" firstAttribute="trailing" secondItem="fyK-3m-Er2" secondAttribute="trailingMargin" id="pZF-cK-q6p"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chtChart" destination="vkw-hJ-bro" id="BC5-wp-TiC"/>
+                        <outlet property="locationPicker" destination="8dP-Aj-lUo" id="dj5-im-RJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj3-2Z-V5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1946" y="151"/>
+            <point key="canvasLocation" x="1944.8" y="150.67466266866569"/>
         </scene>
-        <!--Graph View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Q2R-N2-8Ij">
             <objects>
-                <viewController id="dsQ-3G-bah" customClass="GraphViewController" customModule="WeatherShift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dsQ-3G-bah" customClass="MapViewController" customModule="WeatherShift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qlb-qr-IO5"/>
                         <viewControllerLayoutGuide type="bottom" id="HgX-sz-zEh"/>

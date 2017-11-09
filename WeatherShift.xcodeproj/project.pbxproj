@@ -15,6 +15,7 @@
 		0484DF461FB34BFB007881E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0484DF441FB34BFB007881E3 /* LaunchScreen.storyboard */; };
 		048C03DE1FB3518500FD2916 /* RESTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C03DD1FB3518500FD2916 /* RESTManager.swift */; };
 		048C03E21FB3A11500FD2916 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C03E11FB3A11500FD2916 /* GraphViewController.swift */; };
+		04B8A0E01FB4DE430043DBFA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8A0DF1FB4DE430043DBFA /* MapViewController.swift */; };
 		DB3ED37C0F0C9158ED591673 /* Pods_WeatherShift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C722B9A0D263F9BF4C4D1DA9 /* Pods_WeatherShift.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0484DF471FB34BFB007881E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048C03DD1FB3518500FD2916 /* RESTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTManager.swift; sourceTree = "<group>"; };
 		048C03E11FB3A11500FD2916 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		04B8A0DF1FB4DE430043DBFA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8397F65E1DD18FAAD134636A /* Pods-WeatherShift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherShift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherShift/Pods-WeatherShift.release.xcconfig"; sourceTree = "<group>"; };
 		C4451F3B1DF7C2C71F173A89 /* Pods-WeatherShift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherShift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherShift/Pods-WeatherShift.debug.xcconfig"; sourceTree = "<group>"; };
 		C722B9A0D263F9BF4C4D1DA9 /* Pods_WeatherShift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherShift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				0484DF471FB34BFB007881E3 /* Info.plist */,
 				0484DF3F1FB34BFB007881E3 /* WeatherShift.xcdatamodeld */,
 				048C03E11FB3A11500FD2916 /* GraphViewController.swift */,
+				04B8A0DF1FB4DE430043DBFA /* MapViewController.swift */,
 			);
 			path = WeatherShift;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0484DF411FB34BFB007881E3 /* WeatherShift.xcdatamodeld in Sources */,
+				04B8A0E01FB4DE430043DBFA /* MapViewController.swift in Sources */,
 				048C03E21FB3A11500FD2916 /* GraphViewController.swift in Sources */,
 				048C03DE1FB3518500FD2916 /* RESTManager.swift in Sources */,
 				0484DF3B1FB34BFB007881E3 /* ViewController.swift in Sources */,

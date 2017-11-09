@@ -35,19 +35,24 @@ class RESTManager: NSObject {
                 if let dictonary = object as? [String: Any] {
                     let data = NSManagedObject(entity: entity!, insertInto: context)
                     if let parameter = dictonary["parameter"] as? String {
-                        data.setValue(parameter, forKey: "parameter")
+                        let cleaned = parameter.trimmingCharacters(in: .whitespacesAndNewlines)
+                        data.setValue(cleaned, forKey: "parameter")
                     }
                     if let range = dictonary["range"] as? String {
-                        data.setValue(range, forKey: "range")
+                        let cleaned = range.trimmingCharacters(in: .whitespacesAndNewlines)
+                        data.setValue(cleaned, forKey: "range")
                     }
                     if let region = dictonary["region"] as? String {
-                        data.setValue(region, forKey: "region")
+                        let cleaned = region.trimmingCharacters(in: .whitespacesAndNewlines)
+                        data.setValue(cleaned, forKey: "region")
                     }
                     if let unit = dictonary["unit"] as? String {
-                        data.setValue(unit, forKey: "unit")
+                        let cleaned = unit.trimmingCharacters(in: .whitespacesAndNewlines)
+                        data.setValue(cleaned, forKey: "unit")
                     }
-                    if let value = dictonary["value"] as? Decimal {
-                        data.setValue(value, forKey: "value")
+                    if let value = dictonary["value"] as? String {
+                        let cleaned = value.trimmingCharacters(in: .whitespacesAndNewlines)
+                        data.setValue(Decimal(string: cleaned), forKey: "measure")
                     }
                 }
                 appDelegate.saveContext()
@@ -61,6 +66,23 @@ class RESTManager: NSObject {
 
         let locationFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "WeatherData")
         locationFetch.predicate = NSPredicate(format: "region == %@", location)
+
+        let fetchedLocations:Array<WeatherData>
+        do {
+            fetchedLocations = try context.fetch(locationFetch) as! [WeatherData]
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+
+        return fetchedLocations;
+    }
+
+    func weatherDataForLocation(location: String, type: String) -> Array<WeatherData> {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        let locationFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "WeatherData")
+        locationFetch.predicate = NSPredicate(format: "region == %@ && parameter == %@", location, type)
 
         let fetchedLocations:Array<WeatherData>
         do {
